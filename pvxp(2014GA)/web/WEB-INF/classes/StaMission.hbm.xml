@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.StaMission" table="zzt_stamission" dynamic-update="false">
+		<composite-id>
+				<key-property name="timeid" column="timeid" type="string"/>
+				<key-property name="ownerid" column="ownerid" type="string"/>
+				<key-property name="statesort" column="statesort" type="string"/>
+				<key-property name="createtype" column="createtype" type="string"/>
+		</composite-id>
+
+		<property name="statename" column="statename" type="string"/>
+		<property name="bankid" column="bankid" type="string"/>
+		<property name="currentflag" column="currentflag" type="string"/>
+		<property name="remark1" column="remark1" type="string"/>
+		<property name="remark2" column="remark2" type="string"/>
+		<property name="remark3" column="remark3" type="string"/>
+	</class>
+</hibernate-mapping>

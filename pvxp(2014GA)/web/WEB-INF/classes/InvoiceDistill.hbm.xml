@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.InvoiceDistill" table="zzt_invhistory" dynamic-update="false">
+    <composite-id>
+			<key-property name="termnum" column="termnum" type="string"/>
+			<key-property name="pdate" column="pdate" type="string"/>
+			<key-property name="ptime" column="ptime" type="string"/>
+		</composite-id>
+
+
+		<property name="tellerno" column="tellerno" type="string"/>
+		<property name="firstnum" column="firstnum" type="string"/>
+		<property name="lastnum" column="lastnum" type="string"/>
+		<property name="applytoken" column="applytoken" type="string"/>
+		<property name="appynum" column="appynum" type="string"/>
+		<property name="printtoken" column="printtoken" type="string"/>
+		<property name="remark1" column="remark1" type="string"/>
+		<property name="remark2" column="remark2" type="string"/>
+		<property name="remark3" column="remark3" type="string"/>
+
+	</class>
+</hibernate-mapping>

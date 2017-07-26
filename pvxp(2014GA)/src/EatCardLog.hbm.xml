@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.EatCardLog" table="zzt_eatcardlog" dynamic-update="false">
+    <composite-id>
+			<key-property name="devno" column="devno" type="string"/>
+			<key-property name="edate" column="edate" type="string"/>
+			<key-property name="etime" column="etime" type="string"/>
+		</composite-id>
+
+		<property name="flag" column="flag" type="string"/>
+		<property name="msg" column="msg" type="string"/>
+		<property name="accno" column="accno" type="string"/>
+	</class>
+</hibernate-mapping>

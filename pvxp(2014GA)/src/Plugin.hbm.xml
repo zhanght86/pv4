@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Plugin" table="zzt_pvplugin" dynamic-update="false">
+        <id name="plugid" column="plugid" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="plugname" column="plugname" type="string"/>
+				<property name="firsturl" column="firsturl" type="string"/>
+				<property name="plugtype" column="plugtype" type="string"/>
+				<property name="info" column="info" type="string"/>
+				<property name="userslist" column="userslist" type="string"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.CardOut" table="zzt_card_out"
+		dynamic-update="false">
+		
+	<composite-id>
+	
+		<key-property name="outcardno" column="outcardno" type="string"></key-property>
+		
+		<key-property name="outcarddate" column="outcarddate" type="string"></key-property>
+		
+		<key-property name="outcardtime" column="outcardtime" type="string"></key-property>
+		
+	</composite-id>
+
+		<property name="cardtype" column="cardtype" type="string" />
+
+		<property name="devno" column="devno" type="string" />
+
+		<property name="typeno" column="typeno" type="string" />
+
+		<property name="organno" column="organno" type="string" />
+
+		<property name="idcardno" column="idcardno" type="string" />
+
+		<property name="passwd" column="passwd" type="string" />
+
+		<property name="strcode" column="strcode" type="string" />
+		
+		<!-- 
+		<property name="outcardmonth" column="outcardmonth" type="string" />
+		
+		<property name="serialno" column="serialno" type="string" />
+		 -->
+		<property name="outcardstatus" column="outcardstatus" type="string" />
+
+		<property name="remark1" column="remark1" type="string" />
+
+		<property name="remark2" column="remark2" type="string" />
+
+		<property name="remark3" column="remark3" type="string" />
+
+		<property name="remark4" column="remark4" type="string" />
+		
+	</class>
+</hibernate-mapping>

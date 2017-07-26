@@ -1,0 +1,20 @@
+#
+#Mon Mar 17 08:31:14 GMT 2014
+genBasicCompId=false
+sessionFactoryName=com.lcjr.pvxp.orm.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.1
+jndiPath=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=assigned
+libInstallFolder=
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=/pvxp/hibernate.reveng.xml
+configFile=/pvxp/web/WEB-INF/classes/hibernate.cfg.xml
+createConfigFile=false
+addLibs2Classpath=false

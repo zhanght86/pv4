@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- <property name="hibernate.connection.datasource">jdbc/pvxp</property> 
+			<property name="dialect">net.sf.hibernate.dialect.OracleDialect</property> 
+			<property name="hibernate.session_factory_name"> HibernateSessionFactory</property> 
+			<property name="connection.url">jdbc:oracle:thin:@192.168.0.10:1521:oracle</property> -->
+
+		<!--<property name="dialect">net.sf.hibernate.dialect.InformixDialect</property> 
+			<property name="connection.driver_class">com.informix.jdbc.IfxDriver</property> 
+			<property name="connection.url">jdbc:informix-sqli://10.19.11.250:8899/inspurjr:INFORMIXSERVER=online7;NEWLOACLE=en_us,zh_cn,zh_tw;NEWCODESET=GB2312-80,8859-1,819,Big5</property> -->
+
+
+		<!-- oracle 数据库 -->
+		<property name="dialect">
+			net.sf.hibernate.dialect.OracleDialect
+		</property>
+		<property name="connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+		</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:peixun</property>
+
+
+
+		<!-- BD2 <property name="dialect">org.hibernate.dialect.DB2Dialect</property> 
+			<property name="connection.driver_class">com.ibm.db2.jcc.DB2Driver</property> 
+			<property name="connection.url">jdbc:db2://10.14.12.155:50000/ZSPDB</property> -->
+
+		<!--SQLServer 2005 <property name="dialect">org.hibernate.dialect.SQLServerDialect</property> 
+			<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property> 
+			<property name="connection.url">jdbc:sqlserver://192.168.2.100:1433;databaseName=BankHospital</property> -->
+
+
+		<!--SYBASE <property name="dialect">net.sf.hibernate.dialect.SybaseDialect</property> 
+			<property name="connection.driver_class">com.sybase.jdbc2.jdbc.SybDriver</property> 
+			<property name="connection.url">jdbc:sybase:Tds:10.14.11.249:2550/bcmdb</property> 
+			<property name="dialect">net.sf.hibernate.dialect.SybaseDialect</property> 
+			<property name="connection.driver_class">com.sybase.jdbc2.jdbc.SybDriver</property> 
+			<property name="connection.url">jdbc:sybase:Tds:10.14.11.205:2550/bcmdb</property> -->
+
+
+
+		<property name="connection.username">lccx2002</property>
+		<property name="connection.password">bcm2002</property>
+		<!--<property name="hibernate.dbcp.maxActive">10</property> <property name="hibernate.dbcp.whenExhaustedAction">1</property> 
+			<property name="hibernate.dbcp.maxWait">120000</property> <property name="hibernate.dbcp.maxIdle">10</property> 
+			<property name="hibernate.dbcp.ps.maxActive">10</property> <property name="hibernate.dbcp.ps.whenExhaustedAction">1</property> 
+			<property name="hibernate.dbcp.ps.maxWait">120000</property> <property name="hibernate.dbcp.ps.maxIdle">10</property> -->
+
+		<property name="hibernate.c3p0.min_size">3</property>
+		<property name="hibernate.c3p0.max_size">15</property>
+		<property name="hibernate.c3p0.timeout">5000</property>
+		<property name="hibernate.c3p0.maxIdleTime">1800</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<property name="hibernate.c3p0.validate">true</property>
+		<property name="show_sql">true</property>
+
+
+		<mapping resource="Bankinfo.hbm.xml" />
+		<mapping resource="Devtype.hbm.xml" />
+		<mapping resource="Devinfo.hbm.xml" />
+		<mapping resource="Operator.hbm.xml" />
+		<mapping resource="Devstate.hbm.xml" />
+		<mapping resource="EatCardLog.hbm.xml" />
+		<mapping resource="InvoiceDistill.hbm.xml" />
+		<mapping resource="InvState.hbm.xml" />
+		<mapping resource="InvLog.hbm.xml" />
+		<mapping resource="Oplog.hbm.xml" />
+		<mapping resource="SysParam.hbm.xml" />
+		<mapping resource="Trcdlog.hbm.xml" />
+		<mapping resource="Mxb.hbm.xml" />
+		<mapping resource="Mxb_tmp.hbm.xml" />
+		<mapping resource="StaMission.hbm.xml" />
+		<mapping resource="Plugin.hbm.xml" />
+		<mapping resource="Trcdtjday.hbm.xml" />
+		<mapping resource="Trcdtjmonth.hbm.xml" />
+		<mapping resource="Trcdtjyear.hbm.xml" />
+		<mapping resource="Devtjday.hbm.xml" />
+		<mapping resource="Devtjmonth.hbm.xml" />
+		<mapping resource="Devtjyear.hbm.xml" />
+		<mapping resource="Autosta.hbm.xml" />
+		<mapping resource="Updatetype.hbm.xml" />
+		<mapping resource="Devftinfo.hbm.xml" />
+		<mapping resource="Maintain.hbm.xml" />
+		<mapping resource="CardLy.hbm.xml" />
+		<mapping resource="CardOut.hbm.xml" />
+		<mapping resource="CardStatus.hbm.xml" />
+		<mapping resource="CashStock.hbm.xml" />
+		<mapping resource="CashDetail.hbm.xml" />
+		<mapping resource="TDRecords.hbm.xml" />
+		<mapping resource="DevsState.hbm.xml" />
+
+
+	</session-factory>
+</hibernate-configuration>

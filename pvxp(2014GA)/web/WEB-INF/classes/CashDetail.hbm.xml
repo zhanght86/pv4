@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.CashDetail" table="ZZT_CASHDETAIL"	lazy="false">
+
+		<id name="serverls" column="serverls" type="string" unsaved-value="any">
+			<generator class="assigned" />
+		</id>
+		
+		
+		<property name="trcdtype" column="trcdtype" type="string" />
+		<property name="devno" column="devno" type="string" />
+		<property name="trcddate" column="trcddate" type="string" />
+		<property name="trcdtime" column="trcdtime" type="string" />
+		<property name="bankls" column="bankls" type="string" />
+		<property name="cardno" column="cardno" type="string" />
+		<property name="idcardno" column="idcardno" type="string" />
+		<property name="onecount" column="onecount" type="string" />
+		<property name="twocount" column="twocount" type="string" />
+		<property name="fivecount" column="fivecount" type="string" />
+		<property name="tencount" column="tencount" type="string" />
+		<property name="twentycount" column="twentycount" type="string" />
+		<property name="fiftycount" column="fiftycount" type="string" />
+		<property name="hundredcount" column="hundredcount" type="string" />
+		<property name="addcount" column="addcount" type="string" />
+		<property name="totalamount" column="totalamount" type="string" />
+		<property name="retflag" column="retflag" type="string" />
+		<property name="dzflag" column="dzflag" type="string" />
+		<property name="batchid" column="batchid" type="string" />
+		<property name="remark1" column="remark1" type="string" />
+		<property name="remark2" column="remark2" type="string" />
+	</class>
+</hibernate-mapping>

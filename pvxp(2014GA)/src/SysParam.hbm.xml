@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.SysParam" table="zzt_sysparam" dynamic-update="false">
+        <id name="sysver" column="sysver" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="bdofmxb" column="bdofmxb" type="string"/>
+				<property name="bdofjytjday" column="bdofjytjday" type="string"/>
+				<property name="bdofjytjmonth" column="bdofjytjmonth" type="string"/>
+				<property name="bdofjytjyear" column="bdofjytjyear" type="string"/>
+				<property name="bdofsbtjday" column="bdofsbtjday" type="string"/>
+				<property name="bdofsbtjmonth" column="bdofsbtjmonth" type="string"/>
+				<property name="bdofsbtjyear" column="bdofsbtjyear" type="string"/>
+				<property name="kmofmxb" column="kmofmxb" type="string"/>
+				<property name="kmofjytjday" column="kmofjytjday" type="string"/>
+				<property name="kmofjytjmonth" column="kmofjytjmonth" type="string"/>
+				<property name="kmofjytjyear" column="kmofjytjyear" type="string"/>
+				<property name="kmofsbtjday" column="kmofsbtjday" type="string"/>
+				<property name="kmofsbtjmonth" column="kmofsbtjmonth" type="string"/>
+				<property name="kmofsbtjyear" column="kmofsbtjyear" type="string"/>
+				<property name="statusoftmptable" column="statusoftmptable" type="string"/>
+				<property name="tmpdatastart" column="tmpdatastart" type="string"/>
+				<property name="monthsoftmptable" column="monthsoftmptable" type="string"/>
+    </class>
+</hibernate-mapping>

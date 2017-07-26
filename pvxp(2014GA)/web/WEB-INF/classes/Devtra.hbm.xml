@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+ <class name="com.lcjr.pvxp.orm.Devtra" table="Devtra" dynamic-update="false">
+  <id name="devName" column="devName" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+  </id>
+        <property name="devNo" column="devNo" type="string"/>
+		<property name="phone" column="phone" type="string"/>
+		<property name="addr" column="addr" type="string"/>
+		<property name="tranum" column="tranum" type="string"/>
+		<property name="mainpeople" column="mainpeople" type="string"/>
+ </class>
+</hibernate-mapping>

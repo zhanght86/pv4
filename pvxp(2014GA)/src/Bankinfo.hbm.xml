@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Bankinfo" table="zzt_bankinfo" dynamic-update="false">
+        <id name="bankid" column="bankid" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="banknm" column="banknm" type="string"/>
+				<property name="bankaddr" column="bankaddr" type="string"/>
+				<property name="banktel" column="banktel" type="string"/>
+				<property name="state" column="state" type="string"/>
+				<property name="banktag" column="banktag" type="string"/>
+				<property name="adddate" column="adddate" type="string"/>
+				<property name="remark1" column="remark1" type="string"/>
+				<property name="remark2" column="remark2" type="string"/>
+    </class>
+</hibernate-mapping>

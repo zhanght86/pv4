@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.Trcdtjyear" table="zzt_trcdtjyear" dynamic-update="false">
+    <composite-id>
+				<key-property name="devno" column="devno" type="string"/>
+				<key-property name="devdate" column="devdate" type="string"/>
+				<key-property name="trcdtype" column="trcdtype" type="string"/>
+				<key-property name="ttrnum" column="ttrnum" type="string"/>
+				<key-property name="strnum" column="strnum" type="string"/>
+				<key-property name="moneytype" column="moneytype" type="string"/>
+				<key-property name="ttrsum" column="ttrsum" type="string"/>
+				<key-property name="strsum" column="strsum" type="string"/>
+		</composite-id>
+	</class>
+</hibernate-mapping>

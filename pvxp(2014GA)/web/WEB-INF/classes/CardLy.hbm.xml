@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.CardLy" table="zzt_card_ly"
+		dynamic-update="false">
+	<composite-id>
+		<key-property name="cardtype" column="cardtype" type="string"></key-property>
+		<key-property name="devno" column="devno" type="string"></key-property>
+		<key-property name="lydate" column="lydate" type="string"></key-property>
+		<key-property name="lytime" column="lytime" type="string"></key-property>
+	</composite-id>
+
+
+		<property name="typeno" column="typeno" type="string" />
+
+		<property name="organno" column="organno" type="string" />
+
+		<property name="lynums" column="lynums" type="string" />
+
+		<property name="lystatus" column="lystatus" type="string" />
+
+		<property name="remark1" column="remark1" type="string" />
+
+		<property name="remark2" column="remark2" type="string" />
+		
+	</class>
+</hibernate-mapping>

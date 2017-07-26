@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Devstate" table="zzt_devstate" dynamic-update="false">
+        <composite-id>
+				<key-property name="devno" column="devno" type="string"/>
+				<key-property name="stateno" column="stateno" type="string"/>
+		</composite-id> 
+
+				<property name="statelevel" column="statelevel" type="string"/>
+				<property name="statecode" column="statecode" type="string"/>
+				<property name="bdate" column="bdate" type="string"/>
+				<property name="btime" column="btime" type="string"/>
+				<property name="edate" column="edate" type="string"/>
+				<property name="etime" column="etime" type="string"/>
+    </class>
+</hibernate-mapping>

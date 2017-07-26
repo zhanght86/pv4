@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Autosta" table="zzt_autosta" dynamic-update="false">
+        <id name="id" column="id" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="statename" column="statename" type="string"/>
+				<property name="bankid" column="bankid" type="string"/>
+				<property name="statesort" column="statesort" type="string"/>
+				<property name="statetype" column="statetype" type="string"/>
+				<property name="afterday" column="afterday" type="string"/>
+				<property name="aftertime" column="aftertime" type="string"/>
+				<property name="nextstatday" column="nextstatday" type="string"/>
+				<property name="laststat" column="laststat" type="string"/>
+				<property name="count" column="countnum" type="string"/>
+				<property name="adddate" column="adddate" type="string"/>
+				<property name="opentag" column="opentag" type="string"/>
+				<property name="trcdtypes" column="trcdtypes" type="string"/>
+				<property name="info" column="info" type="string"/>
+				<property name="remark1" column="remark1" type="string"/>
+				<property name="remark2" column="remark2" type="string"/>
+    </class>
+</hibernate-mapping>

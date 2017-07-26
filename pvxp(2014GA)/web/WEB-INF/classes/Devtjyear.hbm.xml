@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.Devtjyear" table="zzt_devtjyear" dynamic-update="false">
+    <composite-id>
+				<key-property name="devno" column="devno" type="string"/>
+				<key-property name="stateno" column="stateno" type="string"/>
+				<key-property name="devdate" column="devdate" type="string"/>
+				<key-property name="times" column="times" type="string"/>
+				<key-property name="timelen" column="timelen" type="string"/>
+		</composite-id>
+	</class>
+</hibernate-mapping>

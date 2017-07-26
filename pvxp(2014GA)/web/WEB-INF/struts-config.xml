@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<!--
+	This is a blank Struts configuration file with an example
+	welcome action/page and other commented sample elements.
+	
+	Tiles and the Struts Validator are configured using the factory defaults
+	and are ready-to-use.
+	
+	NOTE: If you have a generator tool to create the corresponding Java classes
+	for you, you could include the details in the "form-bean" declarations.
+	Otherwise, you would only define the "form-bean" element itself, with the
+	corresponding "name" and "type" attributes, as shown here.
+-->
+
+
+<struts-config>
+
+	<!-- ============================================ Data Source Configuration -->
+
+	<data-sources>
+
+	</data-sources>
+
+	<!-- ================================================ Form Bean Definitions -->
+
+	<form-beans>
+		<!-- ÓÃ»§µÇÂ¼ -->
+		<form-bean name="OperLoginForm"
+			type="com.lcjr.pvxp.actionform.OperLoginForm">
+			<form-property name="operid" type="java.lang.String" />
+			<form-property name="operpwd" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÐÞ¸ÄÃÜÂë -->
+		<form-bean name="ChangePWDForm"
+			type="com.lcjr.pvxp.actionform.ChangePWDForm">
+			<form-property name="operpwd" type="java.lang.String" />
+			<form-property name="newpwd1" type="java.lang.String" />
+			<form-property name="newpwd2" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Éè±¸ÀàÐÍÁÐ±í -->
+		<form-bean name="DevTpListForm"
+			type="com.lcjr.pvxp.actionform.DevTpListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ìí¼ÓÉè±¸ÀàÐÍ -->
+		<form-bean name="AddDevTypeForm"
+			type="com.lcjr.pvxp.actionform.AddDevTypeForm">
+		</form-bean>
+
+		<!-- ÐÞ¸ÄÉè±¸ÀàÐÍ -->
+		<form-bean name="ModifyDevTypeForm"
+			type="com.lcjr.pvxp.actionform.ModifyDevTypeForm">
+		</form-bean>
+
+		<!-- Éè±¸ÀàÐÍÏêÏ¸ -->
+		<form-bean name="DevTpDetailForm"
+			type="com.lcjr.pvxp.actionform.DevTpDetailForm">
+			<form-property name="typeno" type="java.lang.String" />
+		</form-bean>
+
+
+		<!-- Éè±¸ÀàÐÍÉ¾³ý -->
+		<form-bean name="DevTpDelForm"
+			type="com.lcjr.pvxp.actionform.DevTpDelForm">
+		</form-bean>
+
+		<!-- Éè±¸³§ÉÌÁÐ±í -->
+		<form-bean name="DevftListForm"
+			type="com.lcjr.pvxp.actionform.DevftListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ìí¼Ó³§ÉÌ -->
+		<form-bean name="AddDevftForm"
+			type="com.lcjr.pvxp.actionform.AddDevftForm">
+		</form-bean>
+
+		<!-- É¾³ý³§ÉÌ -->
+		<form-bean name="DevftDelForm"
+			type="com.lcjr.pvxp.actionform.DevftDelForm">
+		</form-bean>
+
+		<!-- ³§ÉÌÏêÏ¸ -->
+		<form-bean name="DevftDetailForm"
+			type="com.lcjr.pvxp.actionform.DevftDetailForm">
+		</form-bean>
+
+		<!-- ÐÞ¸Ä³§ÉÌÐÅÏ¢ -->
+		<form-bean name="ModifyDevftForm"
+			type="com.lcjr.pvxp.actionform.ModifyDevftForm">
+		</form-bean>
+
+
+		<!-- ¸üÐÂÀàÐÍÁÐ±í -->
+		<form-bean name="UpdateTypeListForm"
+			type="com.lcjr.pvxp.actionform.UpdateTypeListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ìí¼Ó¸üÐÂÀàÐÍ -->
+		<form-bean name="AddUpdateTypeForm"
+			type="com.lcjr.pvxp.actionform.AddUpdateTypeForm">
+		</form-bean>
+
+		<!-- ÐÞ¸Ä¸üÐÂÀàÐÍ -->
+		<form-bean name="ModifyUpdateTypeForm"
+			type="com.lcjr.pvxp.actionform.ModifyUpdateTypeForm">
+		</form-bean>
+
+		<!-- ¸üÐÂÀàÐÍÏêÏ¸ -->
+		<form-bean name="UpdateTypeDetailForm"
+			type="com.lcjr.pvxp.actionform.UpdateTypeDetailForm">
+			<form-property name="typeno" type="java.lang.String" />
+		</form-bean>
+
+
+		<!-- ¸üÐÂÀàÐÍÉ¾³ý -->
+		<form-bean name="UpdateTypeDelForm"
+			type="com.lcjr.pvxp.actionform.UpdateTypeDelForm">
+		</form-bean>
+
+		<!-- ½»Ò×¼à¿Ø -->
+		<form-bean name="TradeMoniForm"
+			type="com.lcjr.pvxp.actionform.TradeMoniForm">
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±ÁÐ±í -->
+		<form-bean name="OperListForm"
+			type="com.lcjr.pvxp.actionform.OperListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±ÏêÏ¸ -->
+		<form-bean name="OperDetailForm"
+			type="com.lcjr.pvxp.actionform.OperDetailForm">
+			<form-property name="operid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±ÐÞ¸ÄÏÔÊ¾ -->
+		<form-bean name="OperModifyShowForm"
+			type="com.lcjr.pvxp.actionform.OperModifyShowForm">
+			<form-property name="operid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±ÐÞ¸Ä -->
+		<form-bean name="OperModifyForm"
+			type="com.lcjr.pvxp.actionform.OperModifyForm">
+			<form-property name="operid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±É¾³ý -->
+		<form-bean name="OperDeleteForm"
+			type="com.lcjr.pvxp.actionform.OperDeleteForm">
+			<form-property name="operid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ìí¼Ó²Ù×÷Ô± -->
+		<form-bean name="OperAddForm"
+			type="com.lcjr.pvxp.actionform.OperAddForm">
+			<form-property name="operid" type="java.lang.String" />
+			<form-property name="opername" type="java.lang.String" />
+			<form-property name="operstate" type="java.lang.String" />
+			<form-property name="operpasswd" type="java.lang.String" />
+			<form-property name="bankid" type="java.lang.String" />
+			<form-property name="opertype" type="java.lang.String" />
+			<form-property name="authlist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- »ú¹¹ÁÐ±í -->
+		<form-bean name="BankinfoListForm"
+			type="com.lcjr.pvxp.actionform.BankinfoListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- »ú¹¹ÏêÏ¸ -->
+		<form-bean name="BankinfoDetailForm"
+			type="com.lcjr.pvxp.actionform.BankinfoDetailForm">
+			<form-property name="bankid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- »ú¹¹ÐÞ¸ÄÏÔÊ¾ -->
+		<form-bean name="BankinfoModifyShowForm"
+			type="com.lcjr.pvxp.actionform.BankinfoModifyShowForm">
+			<form-property name="bankid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- »ú¹¹ÐÞ¸Ä -->
+		<form-bean name="BankinfoModifyForm"
+			type="com.lcjr.pvxp.actionform.BankinfoModifyForm">
+			<form-property name="bankid" type="java.lang.String" />
+			<form-property name="bankname" type="java.lang.String" />
+			<form-property name="bankaddr" type="java.lang.String" />
+			<form-property name="banktel" type="java.lang.String" />
+			<form-property name="bankstate" type="java.lang.String" />
+		</form-bean>
+
+		<!-- »ú¹¹É¾³ý -->
+		<form-bean name="BankinfoDeleteForm"
+			type="com.lcjr.pvxp.actionform.BankinfoDeleteForm">
+			<form-property name="bankid" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ìí¼Ó»ú¹¹ -->
+		<form-bean name="BankinfoAddForm"
+			type="com.lcjr.pvxp.actionform.BankinfoAddForm">
+			<form-property name="banklevel" type="java.lang.String" />
+			<form-property name="parent_bankid" type="java.lang.String" />
+			<form-property name="bankname" type="java.lang.String" />
+			<form-property name="bankaddr" type="java.lang.String" />
+			<form-property name="banktel" type="java.lang.String" />
+			<form-property name="bankstate" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ô¶³Ì¹ÜÀí -->
+		<form-bean name="RemoteControlForm"
+			type="com.lcjr.pvxp.actionform.RemoteControlForm">
+			<form-property name="rc_op" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÎÄ¼þ·Ö·¢ -->
+		<form-bean name="FileDistributeForm"
+			type="com.lcjr.pvxp.actionform.FileDistributeForm">
+			<form-property name="filestr" type="java.lang.String" />
+			<form-property name="devpath" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÎÄ¼þ»ñÈ¡ -->
+		<form-bean name="FileUploadForm"
+			type="com.lcjr.pvxp.actionform.FileUploadForm">
+			<form-property name="filestr" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÎÄ¼þÉÏ´« -->
+		<form-bean name="FileForm"
+			type="com.lcjr.pvxp.actionform.FileForm">
+			<form-property name="filepath" type="java.lang.String" />
+		</form-bean>
+		<!-- Ä¿Â¼ÄÚÈÝ²éÑ¯ -->
+		<form-bean name="FileStateForm"
+			type="com.lcjr.pvxp.actionform.FileStateForm">
+		</form-bean>
+
+		<!-- ÖÕ¶ËÖØÆôÊ±¼äÐÞ¸Ä -->
+		<form-bean name="DevRebootForm"
+			type="com.lcjr.pvxp.actionform.DevRebootForm">
+
+			<form-property name="devtime" type="java.lang.String" />
+		</form-bean>
+
+
+		<!-- ÖÕ¶ËÖØÆô±êÖ¾ÐÞ¸Ä -->
+		<form-bean name="DevRemoteForm"
+			type="com.lcjr.pvxp.actionform.DevRemoteForm">
+		</form-bean>
+
+		<!-- ÖÕ¶ËipÐÞ¸Ä -->
+		<form-bean name="RemoteForm"
+			type="com.lcjr.pvxp.actionform.RemoteForm">
+
+			<form-property name="devip" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÏûÏ¢·¢ËÍ -->
+		<form-bean name="NewsTransForm"
+			type="com.lcjr.pvxp.actionform.NewsTransForm">
+
+			<form-property name="news" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Ô¶³ÌÎ¬»¤ -->
+		<form-bean name="DevMaintForm"
+			type="com.lcjr.pvxp.actionform.DevMaintForm">
+
+			<form-property name="maintflag" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±²Ù×÷Á÷Ë®²éÑ¯ -->
+		<form-bean name="OplogQueryForm"
+			type="com.lcjr.pvxp.actionform.OplogQueryForm">
+		</form-bean>
+
+		<!-- ²Ù×÷Ô±²Ù×÷Á÷Ë®É¾³ý -->
+		<form-bean name="OplogDeleteForm"
+			type="com.lcjr.pvxp.actionform.OplogDeleteForm">
+			<form-property name="fromdate" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÍÌ¿¨Á÷Ë®É¾³ý -->
+		<form-bean name="EatCardLogDeleteForm"
+			type="com.lcjr.pvxp.actionform.EatCardLogDeleteForm">
+			<form-property name="fromdate" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ½»Ò×Í³¼Æ¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<form-bean name="JytjMInputForm"
+			type="com.lcjr.pvxp.actionform.JytjMInputForm">
+		</form-bean>
+
+		<!-- ½»Ò×Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<form-bean name="JytjMDealForm"
+			type="com.lcjr.pvxp.actionform.JytjMDealForm">
+		</form-bean>
+
+		<!-- ½»Ò×Í³¼Æ(°´Éè±¸)Ìõ¼þÍ³¼Æ -->
+		<form-bean name="JytjDevMDealForm"
+			type="com.lcjr.pvxp.actionform.JytjDevMDealForm">
+			<form-property name="strcdlist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ½»Ò×Í³¼Æ(°´»ú¹¹)Ìõ¼þÍ³¼Æ -->
+		<form-bean name="JytjBankMDealForm"
+			type="com.lcjr.pvxp.actionform.JytjBankMDealForm">
+			<form-property name="strcdlist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Éè±¸ÀàÐÍ½»Ò×Í³¼Æ -->
+		<form-bean name="JytjTypeMDealForm"
+			type="com.lcjr.pvxp.actionform.JytjTypeMDealForm">
+		</form-bean>
+
+		<!-- ½»Ò×ÊÖÐø·ÑÍ³¼Æ -->
+		<form-bean name="JytjFeesMDealForm"
+			type="com.lcjr.pvxp.actionform.JytjFeesMDealForm">
+			<form-property name="strcdlist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- Éè±¸½»Ò×Çé¿öÃ÷Ï¸±í -->
+		<form-bean name="JymlMDealForm"
+			type="com.lcjr.pvxp.actionform.JymlMDealForm">
+		</form-bean>
+
+		<!-- Éè±¸½»Ò×Ê§°ÜÇé¿öÃ÷Ï¸±í -->
+		<form-bean name="TfmlMDealForm"
+			type="com.lcjr.pvxp.actionform.TfmlMDealForm">
+		</form-bean>
+
+		<!-- ÔËÐÐÍ³¼ÆÌõ¼þÍ³¼Æ -->
+		<form-bean name="YxtjMDealForm"
+			type="com.lcjr.pvxp.actionform.YxtjMDealForm">
+		</form-bean>
+
+		<!-- Éè±¸¿ª»úÂÊÍ³¼Æ -->
+		<form-bean name="DrtjMDealForm"
+			type="com.lcjr.pvxp.actionform.DrtjMDealForm">
+		</form-bean>
+
+		<!-- ·¢Æ±´òÓ¡Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<form-bean name="InvtjMDealForm"
+			type="com.lcjr.pvxp.actionform.InvtjMDealForm">
+		</form-bean>
+
+		<!-- Éè±¸¹ÊÕÏÍ³¼ÆÌõ¼þÍ³¼Æ -->
+		<form-bean name="DevtjMDealForm"
+			type="com.lcjr.pvxp.actionform.DevtjMDealForm">
+		</form-bean>
+
+		<!-- ²Ù×÷Á÷Ë®Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<form-bean name="OptjMDealForm"
+			type="com.lcjr.pvxp.actionform.OptjMDealForm">
+		</form-bean>
+
+		<!-- ×Ô¶¯±¨±í¶¨ÖÆ -->
+		<form-bean name="StatADealForm"
+			type="com.lcjr.pvxp.actionform.StatADealForm">
+		</form-bean>
+
+		<!-- Éè±¸ÁÐ±í -->
+		<form-bean name="DevListForm"
+			type="com.lcjr.pvxp.actionform.DevListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!--  Ìí¼ÓÉè±¸ -->
+		<form-bean name="AddDevForm"
+			type="com.lcjr.pvxp.actionform.AddDevForm">
+		</form-bean>
+
+		<!-- É¾³ýÉè±¸ -->
+		<form-bean name="DevDeleteForm"
+			type="com.lcjr.pvxp.actionform.DevDeleteForm">
+		</form-bean>
+
+		<!-- Éè±¸ÏêÏ¸ÐÅÏ¢ -->
+		<form-bean name="DevDetailForm"
+			type="com.lcjr.pvxp.actionform.DevDetailForm">
+		</form-bean>
+
+		<!-- ÐÞ¸ÄÉè±¸ÐÅÏ¢ -->
+		<form-bean name="ModifyDevForm"
+			type="com.lcjr.pvxp.actionform.ModifyDevForm">
+		</form-bean>
+
+		<!-- ±¨ÐÞ¼ÇÂ¼ÁÐ±í -->
+		<form-bean name="MaintainListForm"
+			type="com.lcjr.pvxp.actionform.MaintainListForm" />
+
+		<!-- Ìí¼Ó±¨ÐÞ¼ÇÂ¼ -->
+		<form-bean name="AddMaintainForm"
+			type="com.lcjr.pvxp.actionform.AddMaintainForm">
+		</form-bean>
+
+		<!-- ±¨ÐÞ¼ÇÂ¼ÏêÏ¸ -->
+		<form-bean name="MaintainDetailForm"
+			type="com.lcjr.pvxp.actionform.MaintainDetailForm" />
+
+		<!-- ÐÞ¸Ä±¨ÐÞ¼ÇÂ¼ÐÅÏ¢ -->
+		<form-bean name="ModifyMaintainForm"
+			type="com.lcjr.pvxp.actionform.ModifyMaintainForm">
+		</form-bean>
+
+		<!-- ±¨ÐÞ¼ÇÂ¼Í³¼Æ -->
+		<form-bean name="MqtjMDealForm"
+			type="com.lcjr.pvxp.actionform.MqtjMDealForm">
+		</form-bean>
+
+
+		<!-- µØÍ¼¼à¿Ø -->
+		<!-- ´´½¨µØÍ¼ -->
+		<form-bean name="DevMapCreateForm"
+			type="com.lcjr.pvxp.actionform.DevMapCreateForm">
+			<form-property name="bankid" type="java.lang.String" />
+			<form-property name="imgname" type="java.lang.String" />
+		</form-bean>
+		<!-- ÐÞ¸ÄµØÍ¼ -->
+		<form-bean name="DevMapUpdateForm"
+			type="com.lcjr.pvxp.actionform.DevMapUpdateForm">
+			<form-property name="bankid" type="java.lang.String" />
+			<form-property name="banksstr" type="java.lang.String" />
+			<form-property name="devsstr" type="java.lang.String" />
+			<form-property name="imgnmstr" type="java.lang.String" />
+		</form-bean>
+		<!-- Éè±¸ÀàÐÍÁÐ±í -->
+		<form-bean name="DevMapListForm"
+			type="com.lcjr.pvxp.actionform.DevMapListForm">
+			<form-property name="page" type="java.lang.String" />
+			<form-property name="pagesize" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÍÌ¿¨¼ÇÂ¼²éÑ¯ -->
+		<form-bean name="EatCardLogForm"
+			type="com.lcjr.pvxp.actionform.EatCardLogForm" />
+
+		<!-- ½»Ò×²éÑ¯ -->
+		<form-bean name="TradeQueryForm"
+			type="com.lcjr.pvxp.actionform.TradeQueryForm" />
+
+		<!-- ·¢Æ±ÁìÓÃ²éÑ¯ -->
+		<form-bean name="InvoiceDistillForm"
+			type="com.lcjr.pvxp.actionform.InvoiceDistillForm" />
+
+		<!-- ·¢Æ±×´Ì¬²éÑ¯ -->
+		<form-bean name="InvStateForm"
+			type="com.lcjr.pvxp.actionform.InvStateForm" />
+
+		<!-- ·¢Æ±Ã÷Ï¸²éÑ¯ -->
+		<form-bean name="InvLogForm"
+			type="com.lcjr.pvxp.actionform.InvLogForm" />
+
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾ÝÉèÖÃ -->
+		<form-bean name="SystemSetDataForm"
+			type="com.lcjr.pvxp.actionform.SystemSetDataForm">
+			<form-property name="kmofmxb" type="java.lang.String" />
+			<form-property name="kmofjytjday" type="java.lang.String" />
+			<form-property name="kmofjytjmonth" type="java.lang.String" />
+			<form-property name="kmofjytjyear" type="java.lang.String" />
+			<form-property name="kmofsbtjday" type="java.lang.String" />
+			<form-property name="kmofsbtjmonth" type="java.lang.String" />
+			<form-property name="kmofsbtjyear" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ±¨±íÁÐ±í -->
+		<form-bean name="ReportFormListForm"
+			type="com.lcjr.pvxp.actionform.ReportFormListForm" />
+
+		<!-- ×Ô¶¯±¨±íÁÐ±í -->
+		<form-bean name="STATAReportListForm"
+			type="com.lcjr.pvxp.actionform.STATAReportListForm" />
+
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þÌí¼Ó -->
+		<form-bean name="SystemPluginAddForm"
+			type="com.lcjr.pvxp.actionform.SystemPluginAddForm">
+			<form-property name="plugid" type="java.lang.String" />
+			<form-property name="plugname" type="java.lang.String" />
+			<form-property name="plugtype" type="java.lang.String" />
+			<form-property name="firsturl" type="java.lang.String" />
+			<form-property name="info" type="java.lang.String" />
+			<form-property name="userslist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þÐÞ¸Ä -->
+		<form-bean name="SystemPluginModifyForm"
+			type="com.lcjr.pvxp.actionform.SystemPluginModifyForm">
+			<form-property name="plugid" type="java.lang.String" />
+			<form-property name="plugname" type="java.lang.String" />
+			<form-property name="plugtype" type="java.lang.String" />
+			<form-property name="firsturl" type="java.lang.String" />
+			<form-property name="info" type="java.lang.String" />
+			<form-property name="userslist" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾Ý¹ÜÀí-µ¹ÈëÀúÊ·½»Ò×Ã÷Ï¸ -->
+		<form-bean name="SystemGetHistoryDataForm"
+			type="com.lcjr.pvxp.actionform.SystemGetHistoryDataForm">
+			<form-property name="months" type="java.lang.String" />
+			<form-property name="tmpdatastart" type="java.lang.String" />
+		</form-bean>
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾Ý¹ÜÀí-É¾³ýÀúÊ·½»Ò×Ã÷ÎÄ¼þ -->
+		<form-bean name="SystemDelHistoryDataForm"
+			type="com.lcjr.pvxp.actionform.SystemDelHistoryDataForm">
+			<form-property name="months" type="java.lang.String" />
+			<form-property name="tmpdatastart" type="java.lang.String" />
+		</form-bean>
+
+		<form-bean name="jfSearchForm"
+			type="com.lcjr.pvxp.gemler.JfSearchForm">
+		</form-bean>
+
+		<form-bean name="iniAreaForm"
+			type="com.lcjr.pvxp.ini.IniAreaForm">
+		</form-bean>
+
+		<form-bean name="addAreaForm"
+			type="com.lcjr.pvxp.ini.AreaForm">
+		</form-bean>
+
+		<form-bean name="cardTypeDeleteForm"
+			type="com.lcjr.pvxp.ini.CardTypeDeleteForm">
+		</form-bean>
+
+		<form-bean name="cardTypeAddForm"
+			type="com.lcjr.pvxp.ini.CardTypeForm">
+		</form-bean>
+
+		<form-bean name="specialCardDeleteForm"
+			type="com.lcjr.pvxp.ini.SpecialCardDeleteForm">
+		</form-bean>
+
+		<form-bean name="specialCardForm"
+			type="com.lcjr.pvxp.ini.SpecialCardForm">
+		</form-bean>
+		<form-bean name="cczzjymxForm"
+			type="com.lcjr.pvxp.ini.CczzjymxForm">
+		</form-bean>
+		<!-- ÏÖ½ðÄ£¿é½»Ò×Ã÷Ï¸com.lcjr.pvxp.actionform -->
+		<form-bean name="cashdetailForm"
+			type="com.lcjr.pvxp.actionform.CashDetailForm">
+		</form-bean>
+		
+		<!-- Éè±¸ÊµÊ±¼à¿ØWebSocket -->
+		<form-bean name="devWSMoniListForm"
+			type="com.lcjr.pvxp.actionform.DevWSMoniListForm">
+		</form-bean>
+
+		<!-- Á·Ï° -->
+		<form-bean name="DevtraDeleteForm"
+			type="com.lcjr.pvxp.actionform.DevtraDeleteForm">
+		</form-bean>
+
+		<form-bean name="ModefyDevtraForm"
+			type="com.lcjr.pvxp.actionform.ModefyDevtraForm">
+		</form-bean>
+
+		<form-bean name="DevtraForm"
+			type="com.lcjr.pvxp.actionform.DevtraForm">
+		</form-bean>
+
+		<!-- Éè±¸½»Ò×´ÎÊýÏêÏ¸±í -->
+		<form-bean name="DevtraDetailForm"
+			type="com.lcjr.pvxp.actionform.DevtraDetailForm">
+		</form-bean>
+
+		<!-- Ìí¼ÓÉè±¸½»Ò×´ÎÊý -->
+		<form-bean name="AddDevtraForm"
+			type="com.lcjr.pvxp.actionform.AddDevtraForm">
+		</form-bean>
+		<!-- ·¢¿¨¹ÜÀíCardDistill -->
+		<form-bean name="CardDistillForm"
+			type="com.lcjr.pvxp.actionform.CardDistillForm">
+		</form-bean>
+
+		<!-- ·¢¿¨¹ÜÀí__·¢¿¨×´Ì¬ CardStatus -->
+		<form-bean name="CardStatusForm"
+			type="com.lcjr.pvxp.actionform.CardStatusForm">
+		</form-bean>
+
+		<!-- ·¢¿¨¹ÜÀí__·¢¿¨¼ÇÂ¼Á÷Ë® CardOut -->
+		<form-bean name="CardOutForm"
+			type="com.lcjr.pvxp.actionform.CardOutForm">
+		</form-bean>
+		<!-- ·¢¿¨Á÷Ë®Í³¼ÆÍ³¼Æ -->
+		<form-bean name="CardStaAddForm"
+			type="com.lcjr.pvxp.actionform.CardStaAddForm">
+		</form-bean>
+
+		<!--  ÏÖ½ð¹ÜÀíCashStockForm -->
+		<form-bean name="CashStockForm"
+			type="com.lcjr.pvxp.actionform.CashStockForm">
+		</form-bean>
+
+	<!-- ÏÖ½ð½»Ò×Í³¼ÆÍ³¼Æ -->
+		<form-bean name="CashDetailAddForm"
+			type="com.lcjr.pvxp.actionform.CashDetailAddForm">
+		</form-bean>
+	</form-beans>
+
+
+
+	<!-- Á·Ï° -->
+
+
+	<!-- ========================================= Global Exception Definitions -->
+
+	<global-exceptions>
+		<!-- sample exception handler
+			<exception
+			key="expired.password"
+			type="app.ExpiredPasswordException"
+			path="/changePassword.jsp"/>
+			end sample -->
+	</global-exceptions>
+
+
+	<!-- =========================================== Global Forward Definitions -->
+
+	<global-forwards>
+		<!-- Default forward to "Welcome" action -->
+		<!-- Demonstrates using index.jsp to forward -->
+		<forward name="welcome" path="/Welcome.do" />
+		<forward name="PvMain" path="/PvMain.do" />
+		<forward name="SystemError" path="/Sys_Error.jsp" />
+	</global-forwards>
+
+
+	<!-- =========================================== Action Mapping Definitions -->
+
+	<action-mappings>
+		<!-- Default "Welcome" action -->
+		<!-- Forwards to Welcome.jsp -->
+		<action path="/Welcome" forward="/pages/Welcome.jsp" />
+		<action path="/PvMain" forward="/fram.jsp" />
+		<!-- ÓÃ»§µÇÂ¼ -->
+		<action path="/OPLogin"
+			type="com.lcjr.pvxp.action.OperLoginAction" name="OperLoginForm"
+			scope="request" validate="true" input="/index.jsp">
+			<forward name="LoginSuccess" path="/loading.jsp" />
+		</action>
+
+		<!-- ÓÃ»§µÇÂ¼ -->
+		<!-- Á·Ï° CardOut  -->
+
+
+		<!-- ÏÖ½ð¹ÜÀíCashStock  com.lcjr.pvxp.action.CashStockAction -->
+		<action path="/cashStock"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="CashStockForm" scope="request" validate="true"
+			input="/CashStock.jsp" parameter="method">
+			<forward name="Success" path="/CashStockResult.jsp" />
+		</action>
+
+		<!-- ÏÖ½ðÄ£¿é½»Ò×Ã÷Ï¸action -->
+		<action path="/cashDetail" name="cashdetailForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"  scope="request"
+			input="/page/cash/CashCheck.jsp">
+			<forward name="Success" path="/page/cash/CashDetailList.jsp"></forward>
+		</action>
+		
+		<!-- Éè±¸¼à¿ØWebSocket ÊµÊ±¼à¿Øaction  -->
+		<!-- DevWSMoniList.do -->
+		<action path="/devWSMoniList" name="devWSMoniListForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"  scope="request"
+			input="/DevStatesWSMoni.jsp">
+			<forward name="Success" path="/DevStatesWSMoni.jsp"></forward>
+		</action>
+
+
+
+		<!-- ³ö¿¨×´Ì¬¼ÇÂ¼Í³¼Æ±¨±í -->
+		<action path="/CardStaAdd"
+			type="com.lcjr.pvxp.action.CardStaAddAction" name="CardStaAddForm"
+			scope="request" validate="true">
+			<forward name="Success" path="/CardOutTjResult.jsp" />
+		</action>
+		<!-- ÏÖ½ð½»Ò×Ã÷Ï¸Í³¼ÆÃ÷Ï¸±¨±í -->
+		<action path="/CashDetailAdd"
+			type="com.lcjr.pvxp.action.CashDetailAddAction" name="CashDetailAddForm"
+			scope="request" validate="true" input="page/cash/CashDetailAdd.jsp">
+			<forward name="Success" path="/page/cash/CashDetailSuccess.jsp" />
+		</action>
+		
+		<!-- ·¢¿¨¹ÜÀí__·¢¿¨¼ÇÂ¼Á÷Ë®CardOut -->
+		<action path="/CardOut"
+			type="com.lcjr.pvxp.action.CardOutAction" name="CardOutForm"
+			scope="request" validate="true" input="/CardOut.jsp">
+			<forward name="Success" path="/CardOutResult.jsp" />
+		</action>
+
+		<!-- ·¢¿¨¹ÜÀí__·¢¿¨×´Ì¬²éÑ¯CardState -->
+		<action path="/CardStatus"
+			type="com.lcjr.pvxp.action.CardStatusAction" name="CardStatusForm"
+			scope="request" validate="true" input="/CardStatus.jsp">
+			<forward name="Success" path="/CardStatusResult.jsp" />
+		</action>
+		<!-- ·¢¿¨¹ÜÀíCardDistill -->
+		<action path="/CardDistill"
+			type="com.lcjr.pvxp.action.CardDistillAction" name="CardDistillForm"
+			scope="request" validate="true" input="/CardDistill.jsp">
+			<forward name="Success" path="/CardDistillResult.jsp" />
+		</action>
+		<!--Éè±¸½»Ò×´ÎÊýÉ¾³ý-->
+		<action path="/DevtraDelete"
+			type="com.lcjr.pvxp.action.DevtraDeleteAction"
+			name="DevtraDeleteForm" scope="request" validate="true"
+			input="/ModifyDevtra.jsp">
+			<forward name="DeleteSuccess" path="/AddDevTypeDone.jsp" />
+		</action>
+
+		<!--Éè±¸½»Ò×´ÎÊýÐÞ¸Ä -->
+		<action path="/ModifyDevtra"
+			type="com.lcjr.pvxp.action.ModifyDevtraAction"
+			name="ModefyDevtraForm" scope="request" validate="true"
+			input="/ModifyDevtra.jsp">
+			<forward name="ModifySuccess" path="/ModifyDevtraDone.jsp" />
+		</action>
+		<action path="/Devtra" type="com.lcjr.pvxp.action.DevtraAction"
+			name="DevtraForm" scope="request" validate="true"
+			input="/index.jsp">
+			<forward name="FindSuccess" path="/DevtraResult.jsp" />
+		</action>
+
+		<!--Éè±¸½»Ò×´ÎÊýÏêÏ¸  -->
+		<action path="/DevtraDetail"
+			type="com.lcjr.pvxp.action.DevtraDetailAction"
+			name="DevtraDetailForm" scope="request" validate="true"
+			input="/index.jsp">
+			<forward name="Success" path="/DevtraDetail.jsp" />
+		</action>
+
+		<!--Éè±¸½»Ò×´ÎÊýÏêÏ¸  -->
+		<action path="/AddDevtra"
+			type="com.lcjr.pvxp.action.AddDevtraAction" name="AddDevtraForm"
+			scope="request" validate="true" input="/DevtraResult.jsp">
+			<forward name="Success" path="/AddDevtraDone.jsp" />
+		</action>
+
+		<!-- Á·Ï° -->
+
+
+		<!-- ÐÞ¸ÄÃÜÂë -->
+		<action path="/ChangePWD"
+			type="com.lcjr.pvxp.action.ChangePWDAction" name="ChangePWDForm"
+			scope="request" validate="true" input="/ChangePwd.jsp">
+			<forward name="ChangePWD_Success"
+				path="/ChangePwd_Done.jsp" />
+		</action>
+
+		<!-- Éè±¸ÀàÐÍÁÐ±í -->
+		<action path="/DevTpList"
+			type="com.lcjr.pvxp.action.DevTpListAction" name="DevTpListForm"
+			scope="request" validate="true">
+			<forward name="DevTp_List"
+				path="/Sys_Manage_Devtype_list.jsp" />
+		</action>
+
+		<!-- Ìí¼ÓÉè±¸ÀàÐÍ -->
+		<action path="/AddDevType"
+			type="com.lcjr.pvxp.action.AddDevTypeAction" name="AddDevTypeForm"
+			scope="request" input="/AddDevType.jsp" validate="true">
+			<forward name="Add_DevType_Done" path="/AddDevTypeDone.jsp" />
+		</action>
+
+		<!-- ÐÞ¸ÄÉè±¸ÀàÐÍ -->
+		<action path="/ModifyDevType"
+			type="com.lcjr.pvxp.action.ModifyDevTypeAction"
+			name="ModifyDevTypeForm" scope="request" validate="false">
+			<forward name="Modify_DevType" path="/ModifyDevType.jsp" />
+			<forward name="Modify_DevType_Done"
+				path="/ModifyDevTypeDone.jsp" />
+		</action>
+
+		<!-- Éè±¸ÀàÐÍÏêÏ¸ -->
+		<action path="/DevTpDetail"
+			type="com.lcjr.pvxp.action.DevTpDetailAction" name="DevTpDetailForm"
+			scope="request" validate="true">
+			<forward name="DevTp_Detail" path="/DevTpDetail.jsp" />
+		</action>
+
+		<!-- Éè±¸ÀàÐÍÉ¾³ý -->
+		<action path="/DevTpDel"
+			type="com.lcjr.pvxp.action.DevTpDelAction" name="DevTpDelForm"
+			scope="request" validate="true">
+			<forward name="DevTpDelDone" path="/DevTpDelDone.jsp" />
+		</action>
+
+		<!-- Éè±¸³§ÉÌÁÐ±í -->
+		<action path="/DevftList"
+			type="com.lcjr.pvxp.action.DevftListAction" name="DevftListForm"
+			scope="request" validate="true">
+			<forward name="Devft_List"
+				path="/Sys_Manage_Devft_list.jsp" />
+		</action>
+
+		<!-- Ìí¼Ó³§ÉÌ-->
+		<action path="/AddDevft"
+			type="com.lcjr.pvxp.action.AddDevftAction" name="AddDevftForm"
+			scope="request" input="/AddDevft.jsp" validate="true">
+			<forward name="Add_Devft_Done" path="/AddDevftDone.jsp" />
+		</action>
+
+		<!-- ³§ÉÌÉ¾³ý -->
+		<action path="/DevftDel"
+			type="com.lcjr.pvxp.action.DevftDelAction" name="DevftDelForm"
+			scope="request" validate="true">
+			<forward name="DevftDelDone" path="/DevftDelDone.jsp" />
+		</action>
+
+		<!-- ³§ÉÌÏêÏ¸ÐÅÏ¢ -->
+		<action path="/DevftDetail"
+			type="com.lcjr.pvxp.action.DevftDetailAction" name="DevftDetailForm"
+			scope="request" validate="true">
+			<forward name="Devft_Detail" path="/DevftDetail.jsp" />
+		</action>
+
+		<!-- ÐÞ¸Ä³§ÉÌÐÅÏ¢ -->
+		<action path="/ModifyDevft"
+			type="com.lcjr.pvxp.action.ModifyDevftAction" name="ModifyDevftForm"
+			scope="request" validate="false">
+			<forward name="Modify_Devft" path="/ModifyDevft.jsp" />
+			<forward name="Modify_Devft_Done"
+				path="/ModifyDevftDone.jsp" />
+		</action>
+
+		<!-- ¸üÐÂÀàÐÍÁÐ±í -->
+		<action path="/UpdateTypeList"
+			type="com.lcjr.pvxp.action.UpdateTypeListAction"
+			name="UpdateTypeListForm" scope="request" validate="true">
+			<forward name="UpdateType_List"
+				path="/Sys_Manage_UpdateType_list.jsp" />
+		</action>
+
+		<!-- Ìí¼Ó¸üÐÂÀàÐÍ -->
+		<action path="/AddUpdateType"
+			type="com.lcjr.pvxp.action.AddUpdateTypeAction"
+			name="AddUpdateTypeForm" scope="request" input="/AddUpdateType.jsp"
+			validate="true">
+			<forward name="Add_UpdateType_Done"
+				path="/AddUpdateTypeDone.jsp" />
+		</action>
+
+		<!-- ÐÞ¸Ä¸üÐÂÀàÐÍ -->
+		<action path="/ModifyUpdateType"
+			type="com.lcjr.pvxp.action.ModifyUpdateTypeAction"
+			name="ModifyUpdateTypeForm" scope="request" validate="false">
+			<forward name="Modify_UpdateType"
+				path="/ModifyUpdateType.jsp" />
+			<forward name="Modify_UpdateType_Done"
+				path="/ModifyUpdateTypeDone.jsp" />
+		</action>
+
+		<!-- ¸üÐÂÀàÐÍÏêÏ¸ -->
+		<action path="/UpdateTypeDetail"
+			type="com.lcjr.pvxp.action.UpdateTypeDetailAction"
+			name="UpdateTypeDetailForm" scope="request" validate="true">
+			<forward name="UpdateType_Detail"
+				path="/UpdateTypeDetail.jsp" />
+		</action>
+
+		<!-- ¸üÐÂÀàÐÍÉ¾³ý -->
+		<action path="/UpdateTypeDel"
+			type="com.lcjr.pvxp.action.UpdateTypeDelAction"
+			name="UpdateTypeDelForm" scope="request" validate="true">
+			<forward name="UpdateTypeDelDone"
+				path="/UpdateTypeDelDone.jsp" />
+		</action>
+
+		<!-- ½»Ò×¼à¿Ø -->
+		<action path="/TradeMoni"
+			type="com.lcjr.pvxp.action.TradeMoniAction" name="TradeMoniForm"
+			scope="request" validate="true">
+			<forward name="TradeMoniShow" path="/Trade_moni_show.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±ÁÐ±í -->
+		<action path="/OperList"
+			type="com.lcjr.pvxp.action.OperListAction" name="OperListForm"
+			scope="request" validate="true">
+			<forward name="Operator_List"
+				path="/Sys_Manage_Operator_list.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±ÏêÏ¸ -->
+		<action path="/OperDetail"
+			type="com.lcjr.pvxp.action.OperDetailAction" name="OperDetailForm"
+			scope="request" validate="true">
+			<forward name="Operator_Detail" path="/OperDetail.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±ÐÞ¸ÄÏÔÊ¾ -->
+		<action path="/OperModifyShow"
+			type="com.lcjr.pvxp.action.OperModifyShowAction"
+			name="OperModifyShowForm" scope="request" validate="true">
+			<forward name="Operator_ModifyShow"
+				path="/OperModifyShow.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±ÐÞ¸Ä -->
+		<action path="/OperModify"
+			type="com.lcjr.pvxp.action.OperModifyAction" name="OperModifyForm"
+			scope="request" validate="true" input="/OperModifyShow.do">
+			<forward name="Operator_ModifyDone"
+				path="/OperModifyDone.jsp" />
+			<forward name="Operator_SetpswdDone"
+				path="/OperSetpswdDone.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±É¾³ý -->
+		<action path="/OperDelete"
+			type="com.lcjr.pvxp.action.OperDeleteAction" name="OperDeleteForm"
+			scope="request" validate="true">
+			<forward name="Operator_DeleteDone"
+				path="/OperDeleteDone.jsp" />
+		</action>
+
+		<!-- Ìí¼Ó²Ù×÷Ô± -->
+		<action path="/OperAdd"
+			type="com.lcjr.pvxp.action.OperAddAction" name="OperAddForm"
+			scope="request" validate="true" input="/OperAddShow.jsp">
+			<forward name="Operator_AddDone" path="/OperAddDone.jsp" />
+		</action>
+
+		<!-- »ú¹¹ÁÐ±í -->
+		<action path="/BankinfoList"
+			type="com.lcjr.pvxp.action.BankinfoListAction"
+			name="BankinfoListForm" scope="request" validate="true">
+			<forward name="Bankinfo_List"
+				path="/Sys_Manage_Bankinfo_list.jsp" />
+		</action>
+
+		<!-- »ú¹¹ÏêÏ¸ -->
+		<action path="/BankinfoDetail"
+			type="com.lcjr.pvxp.action.BankinfoDetailAction"
+			name="BankinfoDetailForm" scope="request" validate="true">
+			<forward name="Bankinfo_Detail" path="/BankinfoDetail.jsp" />
+		</action>
+
+		<!-- »ú¹¹ÐÞ¸ÄÏÔÊ¾ -->
+		<action path="/BankinfoModifyShow"
+			type="com.lcjr.pvxp.action.BankinfoModifyShowAction"
+			name="BankinfoModifyShowForm" scope="request" validate="true">
+			<forward name="Bankinfo_ModifyShow"
+				path="/BankinfoModifyShow.jsp" />
+		</action>
+
+		<!-- »ú¹¹ÐÞ¸Ä -->
+		<action path="/BankinfoModify"
+			type="com.lcjr.pvxp.action.BankinfoModifyAction"
+			name="BankinfoModifyForm" scope="request" validate="true"
+			input="/BankinfoModifyShow.do">
+			<forward name="Bankinfo_ModifyDone"
+				path="/BankinfoModifyDone.jsp" />
+		</action>
+
+		<!-- »ú¹¹É¾³ý -->
+		<action path="/BankinfoDelete"
+			type="com.lcjr.pvxp.action.BankinfoDeleteAction"
+			name="BankinfoDeleteForm" scope="request" validate="true">
+			<forward name="Bankinfo_DeleteDone"
+				path="/BankinfoDeleteDone.jsp" />
+		</action>
+
+		<!-- Ìí¼Ó»ú¹¹ -->
+		<action path="/BankinfoAdd"
+			type="com.lcjr.pvxp.action.BankinfoAddAction" name="BankinfoAddForm"
+			scope="request" validate="true" input="/BankinfoAddShow.jsp">
+			<forward name="Bankinfo_AddDone"
+				path="/BankinfoAddDone.jsp" />
+		</action>
+
+		<!-- Ô¶³Ì¹ÜÀí -->
+		<action path="/RemoteControl"
+			type="com.lcjr.pvxp.action.RemoteControlAction"
+			name="RemoteControlForm" scope="request" validate="true">
+			<forward name="RC_result" path="/RemoteControlResult.jsp" />
+		</action>
+
+		<!-- ÎÄ¼þ·Ö·¢ -->
+		<action path="/FileDistribute"
+			type="com.lcjr.pvxp.action.FileDistributeAction"
+			name="FileDistributeForm" scope="request" validate="true">
+			<forward name="FD_result" path="/FileDistributeResult.jsp" />
+		</action>
+
+		<!-- ÎÄ¼þ»ñÈ¡ -->
+		<action path="/FileUpload"
+			type="com.lcjr.pvxp.action.FileUploadAction" name="FileUploadForm"
+			scope="request" validate="true">
+			<forward name="FU_result" path="/FileUploadResult.jsp" />
+		</action>
+
+		<!-- ÎÄ¼þÉÏ´« -->
+		<action path="/FileUpload1"
+			type="com.lcjr.pvxp.action.FileAction" name="FileForm"
+			scope="request" validate="true">
+			<forward name="file_result" path="/FileDoUpload1.jsp" />
+		</action>
+		<!-- Ä¿Â¼ÄÚÈÝ²éÑ¯ -->
+		<action path="/FileState"
+			type="com.lcjr.pvxp.action.FileStateAction" name="FileStateForm"
+			scope="request" validate="true">
+			<forward name="filestate_result" path="/FileStateShow.jsp" />
+		</action>
+
+		<!-- ÖÕ¶ËÖØÆôÊ±¼äÐÞ¸Ä -->
+		<action path="/DevReboot"
+			type="com.lcjr.pvxp.action.DevRebootAction" name="DevRebootForm"
+			scope="request" validate="true">
+			<forward name="devreboot_result"
+				path="/DevRebootResult.jsp" />
+		</action>
+
+		<!-- ÖÕ¶ËÖØÆô±êÖ¾ÐÞ¸Ä -->
+		<action path="/DevRemote"
+			type="com.lcjr.pvxp.action.DevRemoteAction" name="DevRemoteForm"
+			scope="request" validate="true">
+			<forward name="devremote_result"
+				path="/DevRemoteResult.jsp" />
+		</action>
+
+		<!-- ÖÕ¶ËipÐÞ¸Ä -->
+		<action path="/IPRemote"
+			type="com.lcjr.pvxp.action.RemoteAction" name="RemoteForm"
+			scope="request" validate="true">
+
+			<forward name="devremote_result" path="/RemoteResult.jsp" />
+		</action>
+
+		<!-- ÏûÏ¢·¢ËÍ -->
+		<action path="/NewsTrans"
+			type="com.lcjr.pvxp.action.NewsTransAction" name="NewsTransForm"
+			scope="request" validate="true">
+			<forward name="devremote_result"
+				path="/NewsTransResult.jsp" />
+		</action>
+
+		<!-- Ô¶³ÌÎ¬»¤ -->
+		<action path="/DevMaint"
+			type="com.lcjr.pvxp.action.DevMaintAction" name="DevMaintForm"
+			scope="request" validate="true">
+			<forward name="devremote_result" path="/DevMaintResult.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±²Ù×÷Á÷Ë®²éÑ¯ -->
+		<action path="/OplogQuery"
+			type="com.lcjr.pvxp.action.OplogQueryAction" name="OplogQueryForm"
+			scope="request" validate="true">
+			<forward name="OplogQuery_Result"
+				path="/OplogQueryResult.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Ô±²Ù×÷Á÷Ë®É¾³ý -->
+		<action path="/OplogDelete"
+			type="com.lcjr.pvxp.action.OplogDeleteAction" name="OplogDeleteForm"
+			scope="request" validate="true" input="/SystemSetup_ClearOPLog.jsp" />
+
+		<!-- ÍÌ¿¨Á÷Ë®É¾³ý -->
+		<action path="/EatCardLogDelete"
+			type="com.lcjr.pvxp.action.EatCardLogDeleteAction"
+			name="EatCardLogDeleteForm" scope="request" validate="true"
+			input="/SystemSetup_ClearEatCardLog.jsp" />
+
+		<!-- ½»Ò×Í³¼Æ¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/JytjMInput"
+			type="com.lcjr.pvxp.action.JytjMInputAction" scope="request"
+			validate="true">
+			<forward name="JytjMInput" path="/JYTJ_M_Input.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<action path="/JytjMDeal"
+			type="com.lcjr.pvxp.action.JytjMDealAction" name="JytjMDealForm"
+			scope="request" validate="true">
+			<forward name="JytjMDeal" path="/JYTJ_M_Result.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼Æ(°´Éè±¸)¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/JytjDevMInput"
+			type="com.lcjr.pvxp.action.JytjDevMInputAction" scope="request"
+			validate="true">
+			<forward name="JytjDevMInput" path="/JYTJ_M_Input1.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼Æ(°´Éè±¸)Ìõ¼þÍ³¼Æ -->
+		<action path="/JytjDevMDeal"
+			type="com.lcjr.pvxp.action.JytjDevMDealAction"
+			name="JytjDevMDealForm" scope="request" validate="true">
+			<forward name="JytjDevMDeal" path="/JYTJ_M_Result1.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼Æ(°´»ú¹¹)¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/JytjBankMInput"
+			type="com.lcjr.pvxp.action.JytjBankMInputAction" scope="request"
+			validate="true">
+			<forward name="JytjBankMInput" path="/JYTJ_M_Input2.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼Æ(°´»ú¹¹)Ìõ¼þÍ³¼Æ -->
+		<action path="/JytjBankMDeal"
+			type="com.lcjr.pvxp.action.JytjBankMDealAction"
+			name="JytjBankMDealForm" scope="request" validate="true">
+			<forward name="JytjBankMDeal" path="/JYTJ_M_Result2.jsp" />
+		</action>
+
+		<!-- ½»Ò×Í³¼Æ(°´ÀàÐÍ)¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/JytjTypeMInput"
+			type="com.lcjr.pvxp.action.JytjTypeMInputAction" scope="request"
+			validate="true">
+			<forward name="JytjTypeMInput" path="/JYTJ_M_Input3.jsp" />
+		</action>
+
+		<!-- Éè±¸ÀàÐÍ½»Ò×Í³¼Æ -->
+		<action path="/JytjTypeMDeal"
+			type="com.lcjr.pvxp.action.JytjTypeMDealAction"
+			name="JytjTypeMDealForm" scope="request" validate="true">
+			<forward name="JytjTypeMDeal" path="/JYTJ_M_Result3.jsp" />
+		</action>
+
+		<!-- ½»Ò×ÊÖÐø·ÑÍ³¼Æ¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/JytjFeesMInput"
+			type="com.lcjr.pvxp.action.JytjFeesMInputAction" scope="request"
+			validate="true">
+			<forward name="JytjFeesMInput" path="/JYTJ_M_Input4.jsp" />
+		</action>
+
+		<!-- ½»Ò×ÊÖÐø·ÑÍ³¼Æ -->
+		<action path="/JytjFeesMDeal"
+			type="com.lcjr.pvxp.action.JytjFeesMDealAction"
+			name="JytjFeesMDealForm" scope="request" validate="true">
+			<forward name="JytjFeesMDeal" path="/JYTJ_M_Result4.jsp" />
+		</action>
+
+		<!-- Éè±¸½»Ò×Çé¿öÃ÷Ï¸±í -->
+		<action path="/JymlMDeal"
+			type="com.lcjr.pvxp.action.JymlMDealAction" name="JymlMDealForm"
+			scope="request" validate="true">
+			<forward name="JymlMDeal" path="/JYML_M_Result.jsp" />
+		</action>
+
+		<!-- Éè±¸½»Ò×Ê§°ÜÇé¿öÃ÷Ï¸±í -->
+		<action path="/TfmlMDeal"
+			type="com.lcjr.pvxp.action.TfmlMDealAction" name="TfmlMDealForm"
+			scope="request" validate="true">
+			<forward name="TfmlMDeal" path="/TFML_M_Result.jsp" />
+		</action>
+
+		<!-- Éè±¸ÔËÐÐÍ³¼Æ¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/YxtjMInput"
+			type="com.lcjr.pvxp.action.YxtjMInputAction" scope="request"
+			validate="true">
+			<forward name="YxtjMInput" path="/YXTJ_M_Input.jsp" />
+		</action>
+
+		<!-- Éè±¸ÔËÐÐÍ³¼ÆÌõ¼þÍ³¼Æ -->
+		<action path="/YxtjMDeal"
+			type="com.lcjr.pvxp.action.YxtjMDealAction" name="YxtjMDealForm"
+			scope="request" validate="true">
+			<forward name="YxtjMDeal" path="/YXTJ_M_Result.jsp" />
+		</action>
+
+		<!-- Éè±¸¿ª»úÂÊÍ³¼Æ -->
+		<action path="/DrtjMDeal"
+			type="com.lcjr.pvxp.action.DrtjMDealAction" name="DrtjMDealForm"
+			scope="request" validate="true">
+			<forward name="DrtjMDeal" path="/DRTJ_M_Result.jsp" />
+		</action>
+		
+		<!-- »ú¹¹¿ª»úÂÊÍ³¼Æ -->
+		<action path="/DrtjMjGDeal"
+			type="com.lcjr.pvxp.action.DrtjMjGDealAction" name="DrtjMDealForm"
+			scope="request" validate="true">
+			<forward name="DrtjjGMDeal" path="/DRTJJG_M_Result.jsp" />
+		</action>
+		
+		<!-- ³§ÉÌ¹ÊÕÏÂÊÍ³¼Æ -->
+		<action path="/DrtjMCSDeal"
+			type="com.lcjr.pvxp.action.DrtjMCSDealAction" name="DrtjMDealForm"
+			scope="request" validate="true">
+			<forward name="DrtjCSMDeal" path="/DRTJCS_M_Result.jsp" />
+		</action>
+
+		<!-- ·¢Æ±´òÓ¡Í³¼Æ¶ÁÈ¡ÏµÍ³²ÎÊý±í -->
+		<action path="/InvtjMInput"
+			type="com.lcjr.pvxp.action.InvtjMInputAction" scope="request"
+			validate="true">
+			<forward name="InvtjMInput" path="/INVTJ_M_Input.jsp" />
+		</action>
+
+		<!-- ·¢Æ±´òÓ¡Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<action path="/InvtjMDeal"
+			type="com.lcjr.pvxp.action.InvtjMDealAction" name="InvtjMDealForm"
+			scope="request" validate="true">
+			<forward name="InvtjMDeal" path="/INVTJ_M_Result.jsp" />
+		</action>
+
+		<!-- Éè±¸¹ÊÕÏÍ³¼ÆÌõ¼þÍ³¼Æ -->
+		<action path="/DevtjMDeal"
+			type="com.lcjr.pvxp.action.DevtjMDealAction" name="DevtjMDealForm"
+			scope="request" validate="true">
+			<forward name="DevtjMDeal" path="/DEVTJ_M_Result.jsp" />
+		</action>
+
+		<!-- ²Ù×÷Á÷Ë®Í³¼ÆÌõ¼þÍ³¼Æ -->
+		<action path="/OptjMDeal"
+			type="com.lcjr.pvxp.action.OptjMDealAction" name="OptjMDealForm"
+			scope="request" validate="true">
+			<forward name="OptjMDeal" path="/OPTJ_M_Result.jsp" />
+		</action>
+
+		<!-- ×Ô¶¯±¨±í¶¨ÖÆ -->
+		<action path="/StatADeal"
+			type="com.lcjr.pvxp.action.StatADealAction" name="StatADealForm"
+			scope="request" validate="true">
+			<forward name="StatADeal" path="/STAT_A_Result.jsp" />
+		</action>
+
+		<!-- Éè±¸ÁÐ±í -->
+		<action path="/DevList"
+			type="com.lcjr.pvxp.action.DevListAction" name="DevListForm"
+			scope="request" validate="true">
+			<forward name="Dev_List" path="/Sys_Manage_Dev_list.jsp" />
+		</action>
+
+		<!-- Ìí¼ÓÉè±¸ -->
+		<action path="/AddDev" type="com.lcjr.pvxp.action.AddDevAction"
+			name="AddDevForm" scope="request" validate="false"
+			input="/AddDev.jsp">
+			<forward name="Add_Dev" path="/AddDev.jsp" />
+			<forward name="Add_Dev_Done" path="/AddDevDone.jsp" />
+		</action>
+
+		<!-- É¾³ýÉè±¸ -->
+		<action path="/DevDelete"
+			type="com.lcjr.pvxp.action.DevDeleteAction" name="DevDeleteForm"
+			scope="request" validate="false">
+			<forward name="Dev_Delete_Done" path="/DevDeleteDone.jsp" />
+		</action>
+
+		<!-- Éè±¸ÏêÏ¸ÐÅÏ¢ -->
+		<action path="/DevDetail"
+			type="com.lcjr.pvxp.action.DevDetailAction" name="DevDetailForm"
+			scope="request" validate="false">
+			<forward name="Dev_Detail" path="/DevDetail.jsp" />
+		</action>
+
+		<!-- ÐÞ¸ÄÉè±¸ÐÅÏ¢ -->
+		<action path="/ModifyDev"
+			type="com.lcjr.pvxp.action.ModifyDevAction" name="ModifyDevForm"
+			scope="request" validate="false">
+			<forward name="Modify_Dev" path="/ModifyDev.jsp" />
+			<forward name="Modify_Dev_Done" path="/ModifyDevDone.jsp" />
+		</action>
+
+		<!-- ±¨ÐÞ¼ÇÂ¼ÁÐ±í -->
+		<action path="/MaintainList"
+			type="com.lcjr.pvxp.action.MaintainListAction"
+			name="MaintainListForm" scope="request" validate="true">
+			<forward name="Maintain_List"
+				path="/Sys_Manage_Maintain_list.jsp" />
+		</action>
+
+		<!-- Ìí¼Ó±¨ÐÞ¼ÇÂ¼-->
+		<action path="/AddMaintain"
+			type="com.lcjr.pvxp.action.AddMaintainAction" name="AddMaintainForm"
+			scope="request" input="/Maintain.jsp" validate="true">
+			<forward name="Add_Maintain_Done" path="/AddMaintDone.jsp" />
+		</action>
+
+		<!-- ±¨ÐÞ¼ÇÂ¼ÏêÏ¸ -->
+		<action path="/MaintainDetail"
+			type="com.lcjr.pvxp.action.MaintainDetailAction"
+			name="MaintainDetailForm" scope="request" validate="true">
+			<forward name="Maintain_Detail" path="/MaintainDetail.jsp" />
+		</action>
+
+		<!-- ÐÞ¸Ä±¨ÐÞ¼ÇÂ¼ÐÅÏ¢ -->
+		<action path="/ModifyMaintain"
+			type="com.lcjr.pvxp.action.ModifyMaintainAction"
+			name="ModifyMaintainForm" scope="request" validate="true">
+			<forward name="Modify_Maintain_Done"
+				path="/ModifyMaintainDone.jsp" />
+		</action>
+
+		<!-- Î¬ÐÞ¼ÇÂ¼Í³¼Æ -->
+		<action path="/MqtjMDeal"
+			type="com.lcjr.pvxp.action.MqtjMDealAction" name="MqtjMDealForm"
+			scope="request" validate="true">
+			<forward name="MqtjMDeal" path="/MQTJ_M_Result.jsp" />
+		</action>
+
+		<!-- µØÍ¼¼à¿Ø -->
+		<!-- ´´½¨µØÍ¼ -->
+		<action path="/DevMapCreate"
+			type="com.lcjr.pvxp.action.DevMapCreateAction"
+			name="DevMapCreateForm" scope="request" validate="true">
+			<forward name="DevMapCreate_Success"
+				path="/DevMapCreateDone.jsp" />
+			<forward name="DevMapCreate_Fail"
+				path="/DevMapCreateFail.jsp" />
+		</action>
+
+		<!-- ÐÞ¸ÄµØÍ¼ -->
+		<action path="/DevMapUpdate"
+			type="com.lcjr.pvxp.action.DevMapUpdateAction"
+			name="DevMapUpdateForm" scope="request" validate="true">
+			<forward name="DevMapUpdate_Fail"
+				path="/DevMapUpdateFail.jsp" />
+			<forward name="DevMapUpdate_Success"
+				path="/DevMapUpdateDone.jsp" />
+		</action>
+
+		<!-- sample input and input submit actions
+			
+			<action
+			path="/Input"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/pages/Input.jsp"/>
+			
+			<action
+			path="/InputSubmit"
+			type="app.InputAction"
+			name="inputForm"
+			scope="request"
+			validate="true"
+			input="/pages/Input.jsp"/>
+			
+			<action
+			path="/edit*"
+			type="app.Edit{1}Action"
+			name="inputForm"
+			scope="request"
+			validate="true"
+			input="/pages/Edit{1}.jsp"/>
+			
+			end samples -->
+		<!-- Éè±¸ÀàÐÍÁÐ±í -->
+		<action path="/DevMapList"
+			type="com.lcjr.pvxp.action.DevMapListAction" name="DevMapListForm"
+			scope="request" validate="true">
+			<forward name="DevMap_List" path="/DevMap_List.jsp" />
+		</action>
+
+		<!-- ÍÌ¿¨¼ÇÂ¼²éÑ¯ -->
+		<action path="/EatCardLog"
+			type="com.lcjr.pvxp.action.EatCardLogAction" name="EatCardLogForm"
+			scope="request" input="/QueryEatCardLog.jsp" validate="false">
+			<forward name="EatCardLog"
+				path="/QueryEatCardLogResult.jsp" />
+		</action>
+
+		<!-- ½»Ò×²éÑ¯ -->
+		<action path="/TradeQuery"
+			type="com.lcjr.pvxp.action.TradeQueryAction" name="TradeQueryForm"
+			scope="request">
+			<forward name="TradeQuery" path="/TradeQueryResult.jsp" />
+		</action>
+
+		<!-- ·¢Æ±ÁìÓÃ²éÑ¯ -->
+		<action path="/InvoiceDistill"
+			type="com.lcjr.pvxp.action.InvoiceDistillAction"
+			name="InvoiceDistillForm" scope="request" input="/InvoiceDistill.jsp"
+			validate="false">
+			<forward name="InvoiceDistill"
+				path="/InvoiceDistillResult.jsp" />
+		</action>
+
+		<!-- ·¢Æ±×´Ì¬²éÑ¯ -->
+		<action path="/InvState"
+			type="com.lcjr.pvxp.action.InvStateAction" name="InvStateForm"
+			scope="request" input="/InvoiceState.jsp" validate="false">
+			<forward name="InvState" path="/InvoiceStateResult.jsp" />
+		</action>
+
+		<!-- ·¢Æ±Ã÷Ï¸²éÑ¯ -->
+		<action path="/InvLog" type="com.lcjr.pvxp.action.InvLogAction"
+			name="InvLogForm" scope="request" input="/InvoiceMxb.jsp"
+			validate="false">
+			<forward name="InvLog" path="/InvoiceMxbResult.jsp" />
+		</action>
+
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾ÝÉèÖÃ -->
+		<action path="/SystemSetData"
+			type="com.lcjr.pvxp.action.SystemSetDataAction"
+			name="SystemSetDataForm" input="/SystemSetup_setData.jsp"
+			scope="request">
+		</action>
+
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þ¹ÜÀí(ÁÐ±í) -->
+		<action path="/SystemPlugin"
+			type="com.lcjr.pvxp.action.SystemPluginAction">
+			<forward name="SysPluginList"
+				path="/SystemSetup_Plugin.jsp" />
+		</action>
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þÉ¾³ý -->
+		<action path="/SystemPluginDel"
+			type="com.lcjr.pvxp.action.SystemPluginDelAction">
+			<forward name="PluginDel_Success"
+				path="/Plugin_DelDone.jsp" />
+		</action>
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þÌí¼Ó -->
+		<action path="/SystemPluginAdd" name="SystemPluginAddForm"
+			scope="request" type="com.lcjr.pvxp.action.SystemPluginAddAction"
+			input="/SystemSetup_Plugin_Add.jsp" />
+
+		<!-- ÏµÍ³ÉèÖÃ-²å¼þÐÞ¸Ä -->
+		<action path="/SystemPluginModify" name="SystemPluginModifyForm"
+			scope="request" type="com.lcjr.pvxp.action.SystemPluginModifyAction"
+			input="/SystemSetup_Plugin_Modify.jsp" />
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾Ý¹ÜÀí-µ¹ÈëÀúÊ·½»Ò×Ã÷Ï¸ -->
+		<action path="/SystemGetHistoryData"
+			name="SystemGetHistoryDataForm" scope="request"
+			type="com.lcjr.pvxp.action.SystemGetHistoryDataAction"
+			input="/SystemSetup_dealData.jsp" />
+
+		<!-- ÏµÍ³ÉèÖÃ-Êý¾Ý¹ÜÀí-É¾³ýÀúÊ·½»Ò×Ã÷Ï¸ÎÄ¼þ -->
+		<action path="/SystemDelHistoryData"
+			name="SystemDelHistoryDataForm" scope="request"
+			type="com.lcjr.pvxp.action.SystemDelHistoryDataAction"
+			input="/SystemSetup_dealData.jsp" />
+
+		<!-- ²å¼þÁÐ±í -->
+		<action path="/PluginList"
+			type="com.lcjr.pvxp.action.PluginListAction">
+			<forward name="PluginList" path="/PluginList.jsp" />
+		</action>
+
+		<!-- ±¨±íÁÐ±í -->
+		<action path="/ReportFormList"
+			type="com.lcjr.pvxp.action.ReportFormListAction"
+			name="ReportFormListForm" scope="request">
+			<forward name="ReportFormList" path="/ReportFormList.jsp" />
+		</action>
+
+		<!-- ±¨±íÁÐ±í -->
+		<action path="/STATAReportList"
+			type="com.lcjr.pvxp.action.STATAReportListAction"
+			name="STATAReportListForm" scope="request">
+			<forward name="STATAReportList"
+				path="/STAT_A_Report_List.jsp" />
+		</action>
+
+		<!-- gemler »ý·Ö²éÑ¯ -->
+		<action path="/CardJF"
+			type="com.lcjr.pvxp.gemler.ZztCardJfAction" name="jfSearchForm"
+			scope="request" validate="true" input="/jf_search.jsp">
+		</action>
+		<action path="/iniDeleteArea"
+			type="com.lcjr.pvxp.ini.IniDeleteAreaAction" name="iniAreaForm"
+			scope="request" validate="true" input="/iniArea.jsp">
+			<forward name="iniDeletedArea" path="/iniDeletedArea.jsp" />
+		</action>
+
+		<action path="/iniAddArea"
+			type="com.lcjr.pvxp.ini.IniAddAreaAction" name="addAreaForm"
+			scope="request" validate="true" input="/iniAddArea.jsp">
+			<forward name="addAreaDone" path="/iniAddAreaDone.jsp" />
+		</action>
+
+		<action path="/iniCardTypeDelete"
+			type="com.lcjr.pvxp.ini.CardTypeDeleteAction"
+			name="cardTypeDeleteForm" scope="request" validate="true"
+			input="/iniCardType.jsp">
+			<forward name="iniCardTypeDeleted"
+				path="/iniCardTypeDeleted.jsp" />
+		</action>
+
+		<action path="/iniCardTypeAdd"
+			type="com.lcjr.pvxp.ini.AddCardTypeAction" name="cardTypeAddForm"
+			scope="request" validate="true" input="/iniCardTypeAdd.jsp">
+			<forward name="iniCardTypeAdded"
+				path="/iniCardTypeAdded.jsp" />
+		</action>
+
+		<action path="/specialCardDelete"
+			type="com.lcjr.pvxp.ini.IniDeleteSpecialCardAction"
+			name="specialCardDeleteForm" scope="request" validate="true"
+			input="/iniSpecialCard.jsp">
+			<forward name="iniSpecialCardDeleted"
+				path="/iniSpecialCardDeleted.jsp" />
+		</action>
+
+		<action path="/specialCardAdd"
+			type="com.lcjr.pvxp.ini.SpecialCardAddAction" name="specialCardForm"
+			scope="request" validate="true" input="/iniSpecialCard.jsp">
+			<forward name="iniSpecialCardAdded"
+				path="/iniSpecialCardAdded.jsp" />
+		</action>
+		<action path="/cczzjymx" type="com.lcjr.pvxp.ini.CczzjymxAction"
+			name="cczzjymxForm" scope="request" validate="true"
+			input="/CCZZJYMX.jsp">
+			<forward name="cczzjymxDone" path="/CCZZJYMXDone.jsp" />
+		</action>
+
+	</action-mappings>
+
+
+	<!-- ============================================= Controller Configuration -->
+
+	<controller
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+
+	<!-- ======================================== Message Resources Definitions -->
+
+	<message-resources parameter="application" />
+
+
+	<!-- =============================================== Plug Ins Configuration -->
+
+	<!-- ======================================================= Tiles plugin -->
+	<!--
+		This plugin initialize Tiles definition factory. This later can takes some
+		parameters explained here after. The plugin first read parameters from
+		web.xml, thenoverload them with parameters defined here. All parameters
+		are optional.
+		The plugin should be declared in each struts-config file.
+		- definitions-config: (optional)
+		Specify configuration file names. There can be several comma
+		separated file names (default: ?? )
+		- moduleAware: (optional - struts1.1)
+		Specify if the Tiles definition factory is module aware. If true
+		(default), there will be one factory for each Struts module.
+		If false, there will be one common factory for all module. In this
+		later case, it is still needed to declare one plugin per module.
+		The factory will be initialized with parameters found in the first
+		initialized plugin (generally the one associated with the default
+		module).
+		true : One factory per module. (default)
+		false : one single shared factory for all modules
+		- definitions-parser-validate: (optional)
+		Specify if xml parser should validate the Tiles configuration file.
+		true : validate. DTD should be specified in file header (default)
+		false : no validation
+		
+		Paths found in Tiles definitions are relative to the main context.
+	-->
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+
+
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+
+	<!-- =================================================== Validator plugin
+		
+		<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property
+		property="pathnames"
+		value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+		</plug-in>
+	-->
+
+
+</struts-config>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Devftinfo" table="zzt_devftinfo" dynamic-update="false">
+        <id name="devftno" column="devftno" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="devftname" column="devftname" type="string"/>
+				<property name="contact1" column="contact1" type="string"/>
+				<property name="phone1" column="phone1" type="string"/>
+				<property name="mobile1" column="mobile1" type="string"/>
+				<property name="contact2" column="contact2" type="string"/>
+				<property name="phone2" column="phone2" type="string"/>
+				<property name="mobile2" column="mobile2" type="string"/>
+				<property name="remark1" column="remark1" type="string"/>
+				<property name="remark2" column="remark2" type="string"/>
+				<property name="remark3" column="remark3" type="string"/>
+				<property name="remark4" column="remark4" type="string"/>
+            
+    </class>
+</hibernate-mapping>

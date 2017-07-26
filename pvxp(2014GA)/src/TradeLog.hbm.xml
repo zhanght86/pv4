@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.TradeLog" table="zzt_mxb" dynamic-update="false">
+    <composite-id>
+			<key-property name="serverwater" column="serverwater" type="string"/>
+			<key-property name="devno" column="devno" type="string"/>
+			<key-property name="devtrcd" column="devtrcd" type="string"/>
+		</composite-id>
+
+		<property name="devwater" column="devwater" type="string"/>
+		<property name="devip" column="devip" type="string"/>
+		<property name="devdate" column="devdate" type="string"/>
+		<property name="devtime" column="devtime" type="string"/>
+		<property name="servertrcd" column="servertrcd" type="string"/>
+		<property name="returnno" column="returnno" type="string"/>
+		<property name="errmsg" column="errmsg" type="string"/>
+		<property name="accno1" column="accno1" type="string"/>
+		<property name="accno2" column="accno2" type="string"/>
+		<property name="money1" column="money1" type="string"/>
+		<property name="moneytype1" column="moneytype1" type="string"/>
+		<property name="value1" column="value1" type="string"/>
+		<property name="money2" column="money2" type="string"/>
+		<property name="moneytype2" column="moneytype2" type="string"/>
+		<property name="value2" column="value2" type="string"/>
+		<property name="other1" column="other1" type="string"/>
+		<property name="other2" column="other2" type="string"/>
+		<property name="other3" column="other3" type="string"/>
+		<property name="other4" column="other4" type="string"/>
+	</class>
+</hibernate-mapping>

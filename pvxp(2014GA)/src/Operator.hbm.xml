@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Operator" table="zzt_operator" dynamic-update="false">
+        <id name="operid" column="operid" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="bankid" column="bankid" type="string"/>
+				<property name="password" column="password" type="string"/>
+				<property name="name" column="name" type="string"/>
+				<property name="opertype" column="opertype" type="string"/>
+				<property name="authlist" column="authlist" type="string"/>
+				<property name="state" column="state" type="string"/>
+				<property name="adddate" column="adddate" type="string"/>
+				<property name="loginnum" column="remark1" type="string"/>
+				<property name="lastlogin" column="remark2" type="string"/>
+    </class>
+</hibernate-mapping>

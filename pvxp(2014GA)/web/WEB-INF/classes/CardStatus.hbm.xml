@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.CardStatus" table="zzt_card_status"
+		dynamic-update="false">
+		<composite-id>
+			<key-property name="cardtype" column="cardtype" type="string"></key-property>
+			<key-property name="devno" column="devno" type="string"></key-property>
+		</composite-id>
+		
+		<property name="typeno" column="typeno" type="string"></property>
+		<property name="organno" column="organno" type="string"></property>
+		<property name="numlytotal" column="numlytotal" type="string"></property>
+		<property name="numouttotal" column="numouttotal" type="string"></property>
+		<property name="numly" column="numly" type="string"></property>
+		<property name="numout" column="numout" type="string"></property>
+		<property name="numrest" column="numrest" type="string"></property>
+		<property name="remark1" column="remark1" type="string"></property>
+		<property name="remark2" column="remark2" type="string"></property>
+	</class>
+</hibernate-mapping>

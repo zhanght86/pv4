@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.TDRecords" table="ZZT_TDRECORD"
+		dynamic-update="false">
+		<id name="tdId" column="TD_ID" type="integer" unsaved-value="any">
+			<generator class="assigned" />
+		</id>
+		<property name="usrNm" column="USR_NM" type="string" />
+		<property name="usrId" column="USR_ID" type="string" />
+		<property name="xmlTypeCode" column="XML_TYPE_CODE" type="string" />
+		<property name="tdMsg" column="TD_MSG" type="clob" />
+		<property name="tdDate" column="TD_DATE" type="date" />
+	</class>
+</hibernate-mapping>

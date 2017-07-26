@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.lcjr.pvxp.orm.DevsState" table="ZZT_DEVSSTATE"
+		dynamic-update="false">
+		<composite-id>
+			<key-property name="devno" column="devno" type="string" />
+			<key-property name="bdate" column="bdate" type="timestamp" />
+		</composite-id>
+
+		<property name="DevState" column="STATECODE" type="string" />
+		<property name="Prt_State" column="Prt_State" type="string" />
+		<property name="IdCard_State" column="IdCard_State" type="string" />
+		<property name="BrushCard_State" column="BrushCard_State"
+			type="string" />
+		<property name="Bill_State" column="Bill_State" type="string" />
+	</class>
+</hibernate-mapping>

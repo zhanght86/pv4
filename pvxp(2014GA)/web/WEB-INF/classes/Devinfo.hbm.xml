@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Devinfo" table="zzt_devinfo" dynamic-update="false">
+        <id name="devno" column="devno" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="typeno" column="typeno" type="string"/>
+				<property name="packtype" column="packtype" type="string"/>
+				<property name="typestate" column="typestate" type="string"/>
+				<property name="devip" column="devip" type="string"/>
+				<property name="devmac" column="devmac" type="string"/>
+				<property name="devkey" column="devkey" type="string"/>
+				<property name="pinkey" column="pinkey" type="string"/>
+				<property name="mackey" column="mackey" type="string"/>
+				<property name="waterno" column="waterno" type="string"/>
+				<property name="organno" column="organno" type="string"/>
+				<property name="tellerno" column="tellerno" type="string"/>
+				<property name="autherno" column="autherno" type="string"/>
+				<property name="devaddr" column="devaddr" type="string"/>
+				<property name="organcontact" column="organcontact" type="string"/>
+				<property name="dutyname" column="dutyname" type="string"/>
+				<property name="polltag" column="polltag" type="string"/>
+				<property name="updatetag" column="updatetag" type="string"/>
+				<property name="sysdatet" column="sysdatet" type="string"/>
+				<property name="opentag" column="opentag" type="string"/>
+				<property name="sysid" column="sysid" type="string"/>
+				<property name="localtag" column="localtag" type="string"/>
+				<property name="bankid" column="remark1" type="string"/>
+				<property name="remark2" column="remark2" type="string"/>
+				<property name="remark3" column="remark3" type="string"/>
+				<property name="remark4" column="remark4" type="string"/>
+
+    </class>
+</hibernate-mapping>

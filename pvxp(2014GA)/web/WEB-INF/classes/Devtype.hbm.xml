@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.lcjr.pvxp.orm.Devtype" table="zzt_devtype" dynamic-update="false">
+        <id name="typeno" column="typeno" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+				<property name="typestate" column="typestate" type="string"/>
+				<property name="packtype" column="packtype" type="string"/>
+				<property name="devtype" column="devtype" type="string"/>
+				<property name="devname" column="devname" type="string"/>
+				<property name="devftno" column="devfactory" type="string"/>
+				<property name="contact1" column="contact1" type="string"/>
+				<property name="contact2" column="contact2" type="string"/>
+				<property name="filepath" column="filepath" type="string"/>
+				<property name="devinfo" column="devinfo" type="string"/>
+				<property name="remark1" column="remark1" type="string"/>
+				<property name="remark2" column="remark2" type="string"/>
+				<property name="remark3" column="remark3" type="string"/>
+				<property name="remark4" column="remark4" type="string"/>
+            
+    </class>
+</hibernate-mapping>

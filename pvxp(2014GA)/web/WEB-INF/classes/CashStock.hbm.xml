@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.lcjr.pvxp.orm.CashStock" table="ZZT_CASHSTOCK" lazy="false">
+
+		 <id name="batchid" column="batchid" type="string" unsaved-value="any">
+            <generator class="assigned"/>
+        </id>
+		<property name="devno" column="devno" type="string" />
+		<property name="state" column="state" type="string" />
+		<property name="trcddate" column="trcddate" type="string" />
+		<property name="trcdtime" column="trcdtime" type="string" />
+		<property name="cashcount" column="cashcount" type="string" />
+		<property name="totalcash" column="totalcash" type="string" />
+		<property name="remark1" column="remark1" type="string" />
+		<property name="remark2" column="remark2" type="string" />
+	</class>
+</hibernate-mapping>
